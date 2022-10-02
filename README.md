@@ -1,7 +1,7 @@
 # VidTidy
 VidTidy is a Windows Forms Application for quickly sorting video, media, and other files.
 
-#Features
+# Features
 - Play media files to be sorted in an embeded VLC window.
 - Rename and move files.
 - Add frequently used folders to a list to allow for faster sorting
