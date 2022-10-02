@@ -249,6 +249,7 @@ namespace WindowsFormsApp1
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Filter = "text files (*.txt)|*.txt|All files (*.*)|*.*";
+            openFileDialog.InitialDirectory = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 try
@@ -279,6 +280,8 @@ namespace WindowsFormsApp1
 
             SaveFileDialog saveFileDialog = new SaveFileDialog();
             saveFileDialog.FileName = "SavedFolders.txt";
+            saveFileDialog.InitialDirectory = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
+
 
             if (saveFileDialog.ShowDialog() == DialogResult.OK)
             {
@@ -318,6 +321,8 @@ namespace WindowsFormsApp1
 
             SaveFileDialog saveFileDialog = new SaveFileDialog();
             saveFileDialog.FileName = "Seen Files.txt";
+            saveFileDialog.InitialDirectory = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
+
 
             if (saveFileDialog.ShowDialog() == DialogResult.OK)
             {
@@ -343,6 +348,7 @@ namespace WindowsFormsApp1
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Filter = "text files (*.txt)|*.txt|All files (*.*)|*.*";
+            openFileDialog.InitialDirectory = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 try
