@@ -32,6 +32,9 @@ Similarly, the "Save Folders" and "Load Folders" buttons allow you to save your 
 
 Both the reviewed files and saved folders lists are in plain text, so do not use this program in contexts where file or directory names are sensitive information.
 
+# Installation
+Releases are built with ClickOnce. Simply extract the archive, then run setup.exe.
+
 # Build
 VidTidy is built using Visual Studio 2019. To build open the solution in Visual Studio and build. A copy of VLC and the included activeX plugin must be installed on the build machine.
 
