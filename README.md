@@ -11,7 +11,7 @@ VidTidy is a Windows Forms Application for quickly sorting video, media, and oth
 
 # Planned Features
 - Metadata editing
-
+- VidTidy Currently depends on the VLC activeX plugin. I plan to replace this with a proper libVLC player, but that will require me to make my own controls, which will take time.
 # Usage
 To use VidTidy, start by using the Open Files button in the top left corner of the application, then selecting the folder containing the files which you wish to sort.
 Doing so will queue all the files to be sorted, add that folder to the "Move to:" list, and begin media playback if the first file to be sorted is a file playable in VLC media player
