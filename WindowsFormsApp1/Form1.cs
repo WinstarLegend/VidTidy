@@ -351,7 +351,10 @@ namespace WindowsFormsApp1
 
                     foreach (string s in readFiles)
                     {
-                        reviewedPaths.Add(s);
+                        if (Directory.Exists(s))
+                        {
+                            reviewedPaths.Add(s);
+                        }
                     }
                 }
                 catch (Exception l)
