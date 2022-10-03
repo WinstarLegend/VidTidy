@@ -1,5 +1,5 @@
 # VidTidy
-VidTidy is a Windows Forms Application for quickly sorting video, media, and other files. This project is made my me in my free time, so updates may be irregular, infrequent and/or nonexistent. 
+VidTidy is a Windows Forms Application for quickly sorting video, media, and other files. This project is made my me in my free time, so updates may be irregular, infrequent and/or nonexistent. Requires .Net 4.7.8 and VLC media player with the included activeX plugin installed.
 
 # Features
 - Play media files to be sorted in an embeded VLC window.
