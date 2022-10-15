@@ -386,6 +386,8 @@ namespace WindowsFormsApp1
             buttonlocation.Y += rb.Height;
             rb.Location = buttonlocation;
             rb.AutoSize = true;
+            uncheckAll();
+            rb.Checked = true;
             panelRecentFolders.Controls.Add(rb);
         }
         private void LoadNextFile()
