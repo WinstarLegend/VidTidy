@@ -46,6 +46,8 @@ namespace WindowsFormsApp1
             this.buttonDelete = new System.Windows.Forms.Button();
             this.buttonSaveSeen = new System.Windows.Forms.Button();
             this.buttonLoadSeen = new System.Windows.Forms.Button();
+            this.buttonReload = new System.Windows.Forms.Button();
+            this.buttonSort = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.VLCPlugin)).BeginInit();
             this.SuspendLayout();
             // 
@@ -79,7 +81,7 @@ namespace WindowsFormsApp1
             this.buttonNextVideo.Name = "buttonNextVideo";
             this.buttonNextVideo.Size = new System.Drawing.Size(75, 23);
             this.buttonNextVideo.TabIndex = 2;
-            this.buttonNextVideo.Text = "Next Video";
+            this.buttonNextVideo.Text = "Next File";
             this.buttonNextVideo.UseVisualStyleBackColor = true;
             this.buttonNextVideo.Click += new System.EventHandler(this.buttonNextVideo_Click);
             // 
@@ -105,8 +107,6 @@ namespace WindowsFormsApp1
             // 
             // panelRecentFolders
             // 
-            this.panelRecentFolders.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.panelRecentFolders.AutoScroll = true;
             this.panelRecentFolders.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.panelRecentFolders.Location = new System.Drawing.Point(531, 33);
@@ -229,11 +229,34 @@ namespace WindowsFormsApp1
             this.buttonLoadSeen.UseVisualStyleBackColor = true;
             this.buttonLoadSeen.Click += new System.EventHandler(this.buttonLoadSeen_Click);
             // 
+            // buttonReload
+            // 
+            this.buttonReload.AutoSize = true;
+            this.buttonReload.Location = new System.Drawing.Point(94, 9);
+            this.buttonReload.Name = "buttonReload";
+            this.buttonReload.Size = new System.Drawing.Size(83, 23);
+            this.buttonReload.TabIndex = 16;
+            this.buttonReload.Text = "Reload Player";
+            this.buttonReload.UseVisualStyleBackColor = true;
+            this.buttonReload.Click += new System.EventHandler(this.buttonReload_Click);
+            // 
+            // buttonSort
+            // 
+            this.buttonSort.Location = new System.Drawing.Point(693, 329);
+            this.buttonSort.Name = "buttonSort";
+            this.buttonSort.Size = new System.Drawing.Size(75, 23);
+            this.buttonSort.TabIndex = 17;
+            this.buttonSort.Text = "Sort Folders";
+            this.buttonSort.UseVisualStyleBackColor = true;
+            this.buttonSort.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(780, 431);
+            this.Controls.Add(this.buttonSort);
+            this.Controls.Add(this.buttonReload);
             this.Controls.Add(this.buttonLoadSeen);
             this.Controls.Add(this.buttonSaveSeen);
             this.Controls.Add(this.buttonDelete);
@@ -278,6 +301,8 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Button buttonDelete;
         private System.Windows.Forms.Button buttonSaveSeen;
         private System.Windows.Forms.Button buttonLoadSeen;
+        private System.Windows.Forms.Button buttonReload;
+        private System.Windows.Forms.Button buttonSort;
     }
 }
 

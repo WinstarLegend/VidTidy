@@ -225,6 +225,7 @@ namespace WindowsFormsApp1
                 {
                     Console.WriteLine("Error deleting file {0} :{1}", files.Current, l.ToString());
                 }
+                
                 LoadNextFile();
             }
         }
@@ -393,7 +394,7 @@ namespace WindowsFormsApp1
         private void LoadNextFile()
         {
             var foundfile = false;
-            while(files.MoveNext())
+           while(files.MoveNext())
             {
                 if (!reviewedPaths.Contains(files.Current))
                 {
@@ -418,6 +419,43 @@ namespace WindowsFormsApp1
             {
                 MessageBox.Show("No more files");
             }
+        }
+
+        private void buttonReload_Click(object sender, EventArgs e)
+        {
+            VLCPlugin.playlist.stop();
+            VLCPlugin.playlist.removeItem(VLCPlugin.playlist.currentItem);
+            VLCPlugin.playlist.add(new Uri(files.Current).AbsoluteUri);
+            VLCPlugin.playlist.play();
+
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Control[] rlist = new Control[panelRecentFolders.Controls.Count];
+
+            panelRecentFolders.Controls.CopyTo(rlist,0);
+
+            foreach(Control r in panelRecentFolders.Controls)
+            {
+                Console.WriteLine("b " + r.Text);
+            }
+
+            Array.Sort(rlist, (x, y) => String.Compare(x.Text, y.Text));
+
+            buttonlocation.X = 0;
+            buttonlocation.Y = 0;
+
+            foreach(Control rb in rlist)
+            {
+                buttonlocation.Y += rb.Height;
+                rb.Location = buttonlocation;
+            }
+
+            panelRecentFolders.Controls.Clear();
+            panelRecentFolders.Controls.AddRange(rlist);
+
         }
     }
 }
